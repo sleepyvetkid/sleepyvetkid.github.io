@@ -1,11 +1,11 @@
 ---
-title: Veterinary Trauma Triage (ATT)
+title: Animal Trauma Triage (ATT)
 date: 2023-10-01 00:00:00 +1000
 categories: [Emergency & Critical Care, Triage]
 tags: [canine, feline, ecc, triage]     # TAG names should always be lowercase
 ---
 
-## Veterinary Trauma Triage (ATT)<sup>1</sup>
+## Animal Trauma Triage (ATT)<sup>1</sup>
 
 There are 6 categories, each scoring 0-3 points.
 
