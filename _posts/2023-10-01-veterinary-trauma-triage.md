@@ -30,10 +30,14 @@ Cats: A retrospective cohort study of cats with trauma (n=530) showed that an AT
 
 Each point increase is associated with a 2x increase in mortality odds for both dogs and cats.<sup>2,3</sup>
 
-![Graph of number of dogs and percentage mortality at each ATT score](sleepyvetkid.github.io/main/assets/images/2023-10-01-veterinary-trauma-triage/dog-graph-att-mortality.jpg)
+<br>
+
+![Graph of number of dogs and percentage mortality at each ATT score](https://raw.githubusercontent.com/sleepyvetkid/sleepyvetkid.github.io/main/assets/images/2023-10-01-veterinary-trauma-triage/dog-graph-att-mortality.jpg)
 **Figure 1** Graph showing the association between mortality risk and animal trauma triage (ATT) score in dogs.<sup>2</sup>
 
-![Graph of number of cats and percentage mortality at each ATT score](sleepyvetkid.github.io/main/assets/images/2023-10-01-veterinary-trauma-triage/cat-graph-att-mortality.jpg)
+<br>
+
+![Graph of number of cats and percentage mortality at each ATT score](https://raw.githubusercontent.com/sleepyvetkid/sleepyvetkid.github.io/main/assets/images/2023-10-01-veterinary-trauma-triage/cat-graph-att-mortality.jpg)
 **Figure 2** Graph showing the association between mortality risk and animal trauma triage (ATT) score in cats.<sup>3</sup>
 
 ---
