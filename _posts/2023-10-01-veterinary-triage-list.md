@@ -5,7 +5,7 @@ categories: [Emergency & Critical Care, Triage]
 tags: [canine, feline, ecc, triage]     # TAG names should always be lowercase
 ---
 
-## Veterinary Triage List (Modified from Ruys RJ et al.<sup>1</sup>)
+## Veterinary Triage List<sup>1</sup>
 
 |Subcategory|Triage category|Discriminator|
 | --- | --- | --- |
@@ -91,7 +91,7 @@ tags: [canine, feline, ecc, triage]     # TAG names should always be lowercase
 <details>
 
 <summary>
-<b>Definitions of Discriminators</b>
+<b>Definitions of discriminators</b>
 </summary>
 
 <table style="width: 100%">
@@ -193,7 +193,7 @@ It was adapted from the Manchester Triage System (MTS), which is the most used t
 
 ## Pros
 
-- Good agreement with two 'primary investigators' (n=485 dogs and cats; 78% agreement; Pearson Correlation Coefficient (r) = 0.85 — very strong positive relationship).
+- Good agreement when compared against two 'primary investigators' (n=485 dogs and cats; 78% agreement; Pearson Correlation Coefficient (r) = 0.85 — very strong positive relationship).<sup>1</sup>
 
 ## Cons
 
