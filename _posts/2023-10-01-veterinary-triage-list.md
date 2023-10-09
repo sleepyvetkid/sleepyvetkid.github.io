@@ -187,7 +187,7 @@ tags: [canine, feline, ecc, triage]     # TAG names should always be lowercase
 
 ## Description
 
-The veterinary triage list (VTL) was developed by a private emergency centre in Netherlands, Medisch Centrum voor Dieren (Animal Medical Center), in 2012.
+The veterinary triage list (VTL) was developed by a private emergency centre in the Netherlands, Medisch Centrum voor Dieren (Animal Medical Center), in 2012.
 
 It was adapted from the Manchester Triage System (MTS), which is the most used triage system in human medicine.
 
@@ -197,15 +197,15 @@ It was adapted from the Manchester Triage System (MTS), which is the most used t
 
 ## Cons
 
-- The qualifications and experience of the two 'primary investigators' were not specified in the study. This instrument may not be validated properly as it is only as good as the standard is it was compared to.
+- The qualifications and experience of the two ‘primary investigators’ were not specified in the study. The validity is questionable as an instrument is only as good as the standard it was compared to.
 
-- The evaluation was internal and restrospective.
+- The evaluation was internal and retrospective.
 
 - There are no further validation studies.
 
 ## Recommendation
 
-There is little evidence to support its usage. I do not agree with some of the categorisation as well.
+There is little evidence to support its usage, although it may still be a helpful reference.
 
 ## References
 
