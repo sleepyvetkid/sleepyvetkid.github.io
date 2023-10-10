@@ -29,7 +29,8 @@ Healthy: 0.78 (0.37-1.30)
 
 In humans, a shock index of 0.5-0.7 is normal, while >0.9 is indicative of serious disease and requires immediate attention.
 
-A cutoff of ~0.9-1.0 is most often cited, with reported sensitivities of 68-90% and specificities of 50-95%. Values above ≥1.25/1.65 should prompt investigation for hemorrhagic shock. The wide range of reported sensitivity and specificity is due to a lack of good large-scale validation studies.
+A <b>cutoff of ~0.9-1.0</b> is most often cited, with reported sensitivities of 68-90% and specificities of 50-95%.
+<br>Values above ≥1.25/1.65 should prompt investigation for hemorrhagic shock.
 
 <details>
   <summary>Report sensitivities and specificities at various cutoffs.</summary>
@@ -74,7 +75,7 @@ A cutoff of ~0.9-1.0 is most often cited, with reported sensitivities of 68-90% 
 </details>
 
 <br>
-The shock index is not recommended for predicting mortality risk.<sup>4</sup>
+The shock index should not be used to predict mortality risk.<sup>4</sup>
 
 ---
 
