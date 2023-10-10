@@ -7,7 +7,7 @@ tags: [canine, feline, ecc, triage]     # TAG names should always be lowercase
 
 ## VetCOT score<sup>1</sup>
 
-<pre style="text-align:center;background-color:rgba(0,0,0,0.05);padding:20px">
+<pre style="font-size:110%;text-align:center;background-color:rgba(0,0,0,0.05);padding:30px">
 γ = 0.700473 + 0.342245 (<i>lactate</i>) − 3.89630 (<i>iCa</i>)
     + 1.42343 (<i>head trauma</i>) + 2.01600 (<i>spinal trauma</i>)
 </pre>
@@ -16,25 +16,21 @@ where;
 
 <p style="margin-left: 25px;">
 γ represents the log of the odds ratio of the outcome (death or euthanasia),
-</p>
-<p style="margin-left: 25px;">
-<i>lactate</i> is the plasma lactate concentration in mmol/L, obtained within 6 hours of admission,
-</p>
-<p style="margin-left: 25px;">
-<i>iCa</i> is the blood ionized calcium concentration in mmol/L, obtained within 6 hours of admission,
-</p>
-<p style="margin-left: 25px;">
-<i>head trauma</i> is the presence of head trauma (0 = no, 1 = yes), and
-</p>
-<p style="margin-left: 25px;">
-<i>spina trauma</i> is the presence of spinal trauma (0 = no, 1 = yes).
+
+<br><i>lactate</i> is the plasma lactate concentration in mmol/L, obtained within 6 hours of admission,
+
+<br><i>iCa</i> is the blood ionized calcium concentration in mmol/L, obtained within 6 hours of admission,
+
+<br><i>head trauma</i> is the presence of head trauma (0 = no, 1 = yes), and
+
+<br><i>spina trauma</i> is the presence of spinal trauma (0 = no, 1 = yes).
 </p>
 
 <p>
 Conversion into a risk probability percentage of mortality risk (from 0 to 1) can then be obtained by the following equation:
 </p>
 
-<pre style="font-size:medium;text-align:center;background-color:rgba(0,0,0,0.05)">
+<pre style="font-size:120%;text-align:center;background-color:rgba(0,0,0,0.05)">
   <math display="block">
     <mrow>
       <mn>Risk of probability of mortality (VetCOT score)</mn>
