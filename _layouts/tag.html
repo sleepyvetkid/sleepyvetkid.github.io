@@ -4,6 +4,7 @@ layout: page
 ---
 
 {% include lang.html %}
+{% assign sort_posts = site.posts | sort: 'datetime' | reverse %}
 
 <div id="page-tag">
   <h1 class="ps-lg-2">
@@ -12,7 +13,7 @@ layout: page
     <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
   </h1>
   <ul class="content ps-0">
-    {% for post in page.posts %}
+    {% for post in sort_posts %}
       <li class="d-flex justify-content-between px-md-3">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <span class="dash flex-grow-1"></span>
