@@ -33,10 +33,10 @@ Each point increase is associated with a 2x increase in mortality odds for both 
 <table style="width:100%;background-color:rgba(0, 0, 0, 0)">
   <tr style="border-bottom:0px solid transparent">
     <td style="width:50%;white-space:normal">
-(a)<img src="https://raw.githubusercontent.com/sleepyvetkid/sleepyvetkid.github.io/main/assets/images/2023-10-01-animal-trauma-triage/dog-graph-att-mortality.jpg" alt="Graph of number of cats and percentage mortality at each ATT score">
+(a)<img src="/assets/images/2023-10-01-animal-trauma-triage/dog-graph-att-mortality.jpg" alt="Graph of number of cats and percentage mortality at each ATT score">
     </td>
     <td style="width:50%;white-space:normal">
-(b)<img src="https://raw.githubusercontent.com/sleepyvetkid/sleepyvetkid.github.io/main/assets/images/2023-10-01-animal-trauma-triage/cat-graph-att-mortality.jpg" alt="Graph of number of cats and percentage mortality at each ATT score">
+(b)<img src="/assets/images/2023-10-01-animal-trauma-triage/cat-graph-att-mortality.jpg" alt="Graph of number of cats and percentage mortality at each ATT score">
     </td>
   </tr>
   <tr style="border-bottom:0px solid transparent">
