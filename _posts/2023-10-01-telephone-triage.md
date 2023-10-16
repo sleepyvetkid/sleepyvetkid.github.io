@@ -423,8 +423,8 @@ Do not remove any penetrating object. Be careful not to push it deeper.
         <summary>How to use</summary>
         <table style="width:100%;">
           <tr style="background-color:rgba(255,255,255,0);border-bottom:0px">
-            <td style="white-space:normal;">(pic)</td>
-            <td style="white-space:normal;">(pic)</td>
+            <td style="white-space:normal;"><img src="/assets/images/2023-10-01-telephone-triage/epipen.jpg" alt="How to use an EpiPen"></td>
+            <td style="white-space:normal;"><img src="/assets/images/2023-10-01-telephone-triage/anapen.jpg" alt="How to use an Anapen"></td>
           </tr>
         </table>
       </details>
@@ -437,7 +437,7 @@ Do not remove any penetrating object. Be careful not to push it deeper.
 ### Acute Poisoning
 
 <details>
-  <summary>At-Home Emesis</summary>
+  <summary><a href="/posts/emesis">At-Home Emesis</a></summary>
   <ul>
     <li>In general, clients should <i>not</i> be advised to induce emesis at home, especially to avoid a trip to the veterinary clinic.</li>
     <li>However, if the patient has ingested a lethal dose of toxin and is unable to present to a veterinary clinic in time, this may be the only way of saving the patient.</li>
@@ -475,23 +475,27 @@ Do not apply tourniquet.
 
 &#10071; Be careful! The patient may bite due to pain, stress or fear. Go slow and be mindful of any painful areas.
 
-### General Tips
+<b>General Tips</b>
 
 Minimise movement, keep the patient calm and comfortable. This is especially important for patients in respiratory distress.
 
 Drive safely.
 
-### Makeshift Muzzle
+<details>
+  <summary><b>Makeshift Muzzle</b></summary>
+  <ul>
+    A makeshift muzzle using a dog leash, tie or a piece of rope can be very helpful to secure dogs who might bite.
+    <img src="/assets/images/2023-10-01-telephone-triage/makeshift-muzzle.png" alt="How to make a make-shift muzzle">
+  </ul>
+</details>
 
-A makeshift muzzle using a dog leash, tie or a piece of rope can be very helpful to secure dogs who might bite.
-
-(img)
-
-### Makeshift Stretcher/Sling
-
-A large towel or blanket can be used as a make-shift stretcher for non-ambulatory large dogs.
-
-If the patient is weak but still have some movement in the legs, a larget towel can be used as a sling under the pelvis to support their weight to help them walk.
+<details>
+  <summary><b>Makeshift Stretcher/Sling</b></summary>
+  <ul>
+    A large towel or blanket can be used as a make-shift stretcher for non-ambulatory large dogs.
+    <br>If the patient is weak but still have some movement in the legs, a larget towel can be used as a sling under the pelvis to support their weight to help them walk.
+  </ul>
+</details>
 
 ### Where to go?
 
