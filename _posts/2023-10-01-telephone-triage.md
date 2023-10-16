@@ -188,7 +188,31 @@ RICE: Rest, Ice, Compression, Elevation
     </li>
   </ul>
 </details>
-HEMOSTATIC AGENTS?
+
+<details>
+  <summary>Topical hemostatic agent</summary>
+  <ul>
+    <li>There are many available, with different active ingredients and varying efficacy.</li>
+    <li>Some produce an exothermic reaction when activated, which can burn the patient, and should be avoided.</li>
+    <li>There are little to no studies on the veterinary use of these hemostatic agents, so much of the application is extrapolated from human medicine. </li>
+  </ul>
+  <table style="width:100%;">
+    <tr style="background-color:rgba(255,255,255,0);border-bottom:0pt;vertical-align:top">
+      <td style="white-space:normal;">
+        <details>
+          <summary>How to use the QuikClot Combat Gauze</summary>
+          <ul>
+            <li>Pack hemostatic agent into the bleeding wound.</li>
+            <li>Apply firm pressure directly over the wound for at least 3 minutes.</li>
+            <li>Check that the bleeding has stopped. Do not remove the gauze! It can be left in for up to 24 hours.</li>
+            <li>Apply a pressure bandage over the wound and gauze.</li>
+          </ul>
+        </details>
+      </td>
+      <td style="width:40%;white-space:normal;"><img src="/assets/images/2023-10-01-telephone-triage/quikclot-combat-gauze.png" alt="QuikClot Combat Gauze"></td>
+    </tr>
+  </table>
+</details>
 
 <!-- Burns / Large Open Wounds -->
 
@@ -205,7 +229,7 @@ HEMOSTATIC AGENTS?
       </ul>
     </li>
     <li><b>Chemical burns:</b> <i>Thorough</i> cleaning to remove all of the offending substance is important. Consider a bath if appropriate.</li>
-    <li>Water is just as good as sterile saline for cleaning superficial wounds.<sup>ref</sup></li>
+    <li>Water is just as good as sterile saline for cleaning superficial wounds.<sup>2</sup></li>
   </ul>
 </details>
 
@@ -423,8 +447,8 @@ Do not remove any penetrating object. Be careful not to push it deeper.
         <summary>How to use</summary>
         <table style="width:100%;">
           <tr style="background-color:rgba(255,255,255,0);border-bottom:0px">
-            <td style="white-space:normal;">(pic)</td>
-            <td style="white-space:normal;">(pic)</td>
+            <td style="white-space:normal;"><img src="/assets/images/2023-10-01-telephone-triage/epipen.jpg" alt="How to use an EpiPen"></td>
+            <td style="white-space:normal;"><img src="/assets/images/2023-10-01-telephone-triage/anapen.jpg" alt="How to use an Anapen"></td>
           </tr>
         </table>
       </details>
@@ -437,7 +461,7 @@ Do not remove any penetrating object. Be careful not to push it deeper.
 ### Acute Poisoning
 
 <details>
-  <summary>At-Home Emesis</summary>
+  <summary><a href="/posts/emesis">At-Home Emesis</a></summary>
   <ul>
     <li>In general, clients should <i>not</i> be advised to induce emesis at home, especially to avoid a trip to the veterinary clinic.</li>
     <li>However, if the patient has ingested a lethal dose of toxin and is unable to present to a veterinary clinic in time, this may be the only way of saving the patient.</li>
@@ -475,50 +499,52 @@ Do not apply tourniquet.
 
 &#10071; Be careful! The patient may bite due to pain, stress or fear. Go slow and be mindful of any painful areas.
 
-### General Tips
+<b>General Tips</b>
 
 Minimise movement, keep the patient calm and comfortable. This is especially important for patients in respiratory distress.
 
 Drive safely.
 
-### Makeshift Muzzle
+<details>
+  <summary><b>Makeshift Muzzle</b></summary>
+  <ul>
+    A makeshift muzzle using a dog leash, tie or a piece of rope can be very helpful to secure dogs who might bite.
+    <img src="/assets/images/2023-10-01-telephone-triage/makeshift-muzzle.png" alt="How to make a make-shift muzzle">
+  </ul>
+</details>
 
-A makeshift muzzle using a dog leash, tie or a piece of rope can be very helpful to secure dogs who might bite.
-
-(img)
-
-### Makeshift Stretcher/Sling
-
-A large towel or blanket can be used as a make-shift stretcher for non-ambulatory large dogs.
-
-If the patient is weak but still have some movement in the legs, a larget towel can be used as a sling under the pelvis to support their weight to help them walk.
+<details>
+  <summary><b>Makeshift Stretcher/Sling</b></summary>
+  <ul>
+    A large towel or blanket can be used as a make-shift stretcher for non-ambulatory large dogs.
+    <br>If the patient is weak but still have some movement in the legs, a larget towel can be used as a sling under the pelvis to support their weight to help them walk.
+  </ul>
+</details>
 
 ### Where to go?
 
 For true emergencies, this will be the closest available veterinary clinic, or the regular veterinary clinic if it is located within reasonable distance.
 
-Consider if the veterinary clinic would be suitably equipped to deal with this particular emergency. Some veterinary clinics might not have the provision for long-term oxygen therapy, or stock expensive antivenom or antidotes.
+Ideally, the patient is stabilised and provided pain relief at the earliest opportunity, and then referred to an emergency centre for ongoing care, if required.
 
-If overnight care with monitoring is required, and the client is able and willing to afford it, then perhaps the client should be sent directly to the emergency centre.
+However, occasionally, the nearest clinic might not be adequately equipped to deal with a particular emergency (e.g. provide prolonged oxygen therapy, administer antivenom or other antidotes). Emergency centres represent the best chance for patients with true emergencies and those who require critical care.
 
-On the other hand, it might be better for the patient to be stabilised and receive pain relief at a general practice veterinary clinic first, before referring to an emergency centre.
+While it might make sense to direct emergencies that would likely require intensive care (e.g. DKA) straight to the emergency centre, some clients might not be able to afford the expensive emergency room and ICU care. They might appreciate during this stressful time, speaking first to their primary veterinarian whom they have a relationship with, before making the decision to go to the ER.
 
-There are also clients who cannot afford intensive care at the emergency centre and they would prefer to discuss their options with their primary veterinarians instead of being out of pocket just for turning up at the emergency centre.
-
-At the end of the day, it really depends on the nature of the emergency and the preference of the client to pursue a high but expensive level of care at the emergency centre or a more modest but more budget-friendly option at their primary veterinary clinic.
-
-However, if a true emergency is identified over the phone, the clinic must not turn the client away even if they cannot pay. The client should be asked to bring the patient in regardless, and finances can be discussed afterwards. If the client still refuses to bring the patient in, a free welfare consultation can be offered. This provides the veterinarian an opportunity to safeguard the welfare of the patient by providing pain relief and potentially some stabilisation, and to speak in person to the client. In reality, if they cannot pay for consultations, most emergencies are expensive to treat and welfare euthanasia is the usual outcome.
+Ultimately, it depends on the nature of the emergency and the individual preference of the client.
 
 <!-- Others -->
 
 ## Welfare
 
-Unfortunately, it is not uncommon for emergencies to happen to clients who cannot pay. Veterinarians have an obligation to protect the welfare of animals, and so they cannot turn away these clients. Veterinary clinics should be prepared to provide free pain relief and welfare euthanasia. In rare instances, a patient may be surrendered to the veterinary clinic or an animal charity organisation so that veterinary care can be paid for by somebody else.
+For those who work in the ER, it is not uncommon to encounter clients who cannot pay. Veterinarians have an obligation to protect the welfare of animals, and so they cannot turn away these clients. Veterinary clinics should be prepared to provide free pain relief and welfare euthanasia. This is the least we can do. In very rare instances, a patient may be surrendered to the veterinary clinic or an animal charity organisation so that veterinary care can be paid for by somebody else.
 
-There might also be times when these clients might refuse to come to the veterinary clinic, for fear of having to put their pet to sleep. This is a difficult scenario and unfortunately, the veterinarian has to do what is best for the animal. The topic of euthanasia is best avoided over the phone and the goal is to convince the client to come into the veterinary clinic, so that the patient might receive pain relief and be assessed by a veterinarian. Once in the clinic, the veterinarian would have the opportunity to chat with the client and perhaps convince them of the rationale for welfare euthanasia, if necessary.
+There might also be times when a client might refuse to come to the veterinary clinic, for fear of having to put their pet to sleep. This is a difficult scenario and unfortunately, the veterinarian has to put the patient's best interest before the client's. The topic of euthanasia is best avoided over the phone and the goal should be to convince the client to bring their pet to the veterinary clinic, so that the patient might receive pain relief and be assessed by a veterinarian. Once in the clinic, the veterinarian can educate the client to do what is best for their pet, even if that means euthanasia.
 
-It is rare for a veterinary clinic to have to refuse to return a patient to a client and/or perform welfare euthanasia without the client's consent.
+It is rare for a veterinary clinic to refuse returning a patient to a client and/or perform welfare euthanasia without the client's consent.
 
 ## References
 
-Fernandez R, Griffiths R, Ussia C. Water for wound cleansing. *Cochrane Database Syst Rev*. 2002;(4):CD003861. doi:10.1002/14651858.CD003861
+1. Hanel RM, Palmer L, Baker J, et al. Best practice recommendations for prehospital veterinary care of dogs and cats. *J Vet Emerg Crit Care*. 2016;26(2):166-233. doi:10.1111/vec.12455
+
+2. Fernandez R, Griffiths R, Ussia C. Water for wound cleansing. *Cochrane Database Syst Rev*. 2002;(4):CD003861. doi:10.1002/14651858.CD003861
