@@ -205,7 +205,7 @@ HEMOSTATIC AGENTS?
       </ul>
     </li>
     <li><b>Chemical burns:</b> <i>Thorough</i> cleaning to remove all of the offending substance is important. Consider a bath if appropriate.</li>
-    <li>Water is just as good as sterile saline for cleaning superficial wounds.<sup>ref</sup></li>
+    <li>Water is just as good as sterile saline for cleaning superficial wounds.<sup>2</sup></li>
   </ul>
 </details>
 
@@ -525,4 +525,6 @@ It is rare for a veterinary clinic to have to refuse to return a patient to a cl
 
 ## References
 
-Fernandez R, Griffiths R, Ussia C. Water for wound cleansing. *Cochrane Database Syst Rev*. 2002;(4):CD003861. doi:10.1002/14651858.CD003861
+1. Hanel RM, Palmer L, Baker J, et al. Best practice recommendations for prehospital veterinary care of dogs and cats. *J Vet Emerg Crit Care*. 2016;26(2):166-233. doi:10.1111/vec.12455
+
+2. Fernandez R, Griffiths R, Ussia C. Water for wound cleansing. *Cochrane Database Syst Rev*. 2002;(4):CD003861. doi:10.1002/14651858.CD003861
