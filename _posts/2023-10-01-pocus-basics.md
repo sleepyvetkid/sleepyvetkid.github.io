@@ -89,6 +89,8 @@ Ideally, the patient should be facing the screen of the ultrasound machine, so t
 
 The ultrasound machine should be positioned so that buttons are readily accessible and the image can be viewed without having to look over your shoulder.
 
+<img src="/assets/images/2023-10-01-pocus/basics/patient-orientation.jpg" alt="Patient orientation to the ultrasound machine and operator">
+
 Most POCUS can be done in a comfortable patient position. This is helpful as minimal repositioning is required for the painful or unstable patient.
 
 The hair of the patient does *not* need to be clipped. Part the hair and use methylated spirits (70% ethanol), acoustic coupling gel, or alcoholic hand gel.
@@ -165,21 +167,33 @@ Focus number: One focus is recommended. Multiple focuses can result in lower scr
 
 Focus position: At the level of the structure of interest or just slighlty below it.
 
-<img src="/assets/images/2023-10-01-pocus/basics/focus.jpg" alt="Focus number and location">
+<img src="/assets/images/2023-10-01-pocus/basics/focus-number.jpg" alt="Focus number and location">
 
 ### Probe manoeuvres
 
 #### Rock
 
+<img src="/assets/images/2023-10-01-pocus/basics/rock.jpg" alt="Probe manoeuvre rock">
+
 #### Fan
+
+<img src="/assets/images/2023-10-01-pocus/basics/fan.jpg" alt="Probe manoeuvre fan">
 
 #### Rotate
 
+<img src="/assets/images/2023-10-01-pocus/basics/rotate.jpg" alt="Probe manoeuvre rotate">
+
 #### Slide
+
+<img src="/assets/images/2023-10-01-pocus/basics/slide.jpg" alt="Probe manoeuvre slide">
 
 #### Sweep
 
+<img src="/assets/images/2023-10-01-pocus/basics/sweep.jpg" alt="Probe manoeuvre sweep">
+
 #### Pressure / Compression
+
+<img src="/assets/images/2023-10-01-pocus/basics/pressure.jpg" alt="Probe manouvre pressure/compression">
 
 ### Modes
 
@@ -187,14 +201,34 @@ Focus position: At the level of the structure of interest or just slighlty below
 
 ### Shadowing
 
+Clean shadowing
+
+<img src="/assets/images/2023-10-01-pocus/basics/clean-shadowing.jpg" alt="">
+
+Dirty shadowing
+
+<img src="/assets/images/2023-10-01-pocus/basics/dirty-shadowing.jpg" alt="">
+
 ### Edge Shadowing
+
+<img src="/assets/images/2023-10-01-pocus/basics/edge-shadowing.jpg" alt="">
 
 ### Acoustic Enhancement
 
+<img src="/assets/images/2023-10-01-pocus/basics/acoustic-enhancement.jpg" alt="">
+
 ### Mirror Image
+
+<img src="/assets/images/2023-10-01-pocus/basics/mirror.jpg" alt="">
 
 ### Reverberations (A Lines)
 
+<img src="/assets/images/2023-10-01-pocus/basics/reverberations.jpg" alt="">
+
 ### Comet-Tails (B Lines)
 
+<img src="/assets/images/2023-10-01-pocus/basics/comet-tail.jpg" alt="">
+
 ### Side Lobe, Side Thickeness
+
+<img src="/assets/images/2023-10-01-pocus/basics/side-lobe-slice-thickness.jpg" alt="">
