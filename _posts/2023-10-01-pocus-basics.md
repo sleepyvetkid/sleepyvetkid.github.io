@@ -165,7 +165,7 @@ Focus number: One focus is recommended. Multiple focuses can result in lower scr
 
 Focus position: At the level of the structure of interest or just slighlty below it.
 
-<img src="/assets/images/2023-10-01-pocus/basics/focus.jpg>" alt="Focus number and location">
+<img src="/assets/images/2023-10-01-pocus/basics/focus.jpg" alt="Focus number and location">
 
 ### Probe manoeuvres
 
