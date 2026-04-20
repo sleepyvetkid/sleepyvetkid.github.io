@@ -17,10 +17,6 @@
             --blue: #00A3FF; /* Bright medical blue for breath cue */
             
             /* --- RESPONSIVE SCALING ENGINE --- */
-            /* Calculates a scaling unit based on the smaller of the dynamic viewport height or width.
-               100dvh / 555 base height = 0.18dvh (Increased from 0.133 to fill vertical dead space)
-               100dvw / 1000 base width = 0.1dvw
-            */
             --u: min(0.18dvh, 0.1dvw);
         }
 
@@ -32,68 +28,50 @@
         }
 
         body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
             background-color: var(--bg-color);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: center; justify-content: center;
             overscroll-behavior-y: none; 
-            user-select: none; 
-            -webkit-user-select: none;
+            user-select: none; -webkit-user-select: none;
             overflow: hidden;
         }
 
         /* --- RESPONSIVE 3-COLUMN LAYOUT --- */
         .app-layout {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: calc(1000 * var(--u));
+            display: flex; flex-direction: row;
+            align-items: center; justify-content: center;
+            width: 100%; max-width: calc(1000 * var(--u));
             gap: calc(20 * var(--u));
             padding: calc(10 * var(--u));
             box-sizing: border-box;
         }
 
         .center-col {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
+            display: flex; flex-direction: column;
+            align-items: center; width: 100%;
             max-width: calc(300 * var(--u));
             flex: 0 0 auto;
         }
 
         .side-col {
-            display: flex;
-            flex-direction: column;
-            flex: 0 0 auto;
-            width: calc(170 * var(--u));
+            display: flex; flex-direction: column;
+            flex: 0 0 auto; width: calc(170 * var(--u));
             gap: calc(50 * var(--u)); 
-            opacity: 0;
-            visibility: hidden;
+            opacity: 0; visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
-            position: relative;
-            top: calc(-30 * var(--u));
+            position: relative; top: calc(-30 * var(--u));
         }
 
         .side-col.visible {
-            opacity: 1;
-            visibility: visible;
+            opacity: 1; visibility: visible;
         }
 
         @media (max-width: 720px) {
-            .side-col {
-                display: none !important;
-            }
-            #mobile-drugs-btn {
-                display: block !important;
-            }
+            .side-col { display: none !important; }
+            #mobile-drugs-btn { display: block !important; }
         }
 
         /* --- DRUG TABLES STYLING --- */
@@ -106,447 +84,202 @@
         }
 
         .table-header {
-            background-color: var(--navy);
-            color: var(--yellow);
+            background-color: var(--navy); color: var(--yellow);
             padding: calc(8 * var(--u)) calc(10 * var(--u));
             font-size: calc(16 * var(--u)); 
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: calc(0.5 * var(--u));
-            text-align: center;
+            font-weight: 700; text-transform: uppercase;
+            letter-spacing: calc(0.5 * var(--u)); text-align: center;
         }
 
         .table-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
             padding: calc(8 * var(--u)) calc(10 * var(--u));
             border-bottom: 1px solid var(--light-grey);
         }
+        .table-row:last-child { border-bottom: none; }
 
-        .table-row:last-child {
-            border-bottom: none;
-        }
-
-        .drug-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .drug-name {
-            font-weight: 700;
-            color: var(--navy);
-            font-size: calc(14 * var(--u)); 
-        }
-
-        .drug-dose, .drug-conc {
-            font-size: calc(9 * var(--u)); 
-            color: #888;
-            margin-top: calc(2 * var(--u));
-            line-height: 1.1;
+        .drug-info { display: flex; flex-direction: column; }
+        .drug-name { font-weight: 700; color: var(--navy); font-size: calc(14 * var(--u)); }
+        
+        .drug-dose, .drug-conc, .drug-meta {
+            font-size: calc(9 * var(--u)); color: #888;
+            margin-top: calc(2 * var(--u)); line-height: 1.1;
         }
 
         .drug-vol {
-            font-weight: 800;
-            color: var(--green);
-            font-size: calc(15 * var(--u)); 
-            text-align: right;
+            font-weight: 800; color: var(--green);
+            font-size: calc(15 * var(--u)); text-align: right;
             white-space: nowrap;
         }
 
-        .dose-defib {
-            color: var(--red); 
-        }
+        .dose-defib { color: var(--red); }
 
         /* --- WEIGHT INPUT STYLING --- */
         .weight-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin-bottom: calc(30 * var(--u)); 
-            width: 100%;
-            position: relative;
+            width: 100%; position: relative;
         }
 
         .weight-input {
-            width: calc(130 * var(--u));
-            height: calc(60 * var(--u));
+            width: calc(130 * var(--u)); height: calc(60 * var(--u));
             background-color: #FFFFFF;
-            border: 2px solid var(--light-grey);
-            border-radius: calc(30 * var(--u)); 
-            font-size: calc(32 * var(--u));
-            font-weight: 700;
-            color: var(--navy);
-            text-align: center;
-            font-family: inherit;
-            outline: none;
-            box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(0,0,0,0.03);
-            transition: border-color 0.2s;
-            -moz-appearance: textfield; 
-            touch-action: manipulation;
+            border: 2px solid var(--light-grey); border-radius: calc(30 * var(--u)); 
+            font-size: calc(32 * var(--u)); font-weight: 700;
+            color: var(--navy); text-align: center; font-family: inherit;
+            outline: none; box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(0,0,0,0.03);
+            transition: border-color 0.2s; touch-action: manipulation;
         }
-
-        .weight-input:focus {
-            border-color: var(--navy);
-        }
-
-        .weight-input::-webkit-outer-spin-button,
-        .weight-input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+        .weight-input:focus { border-color: var(--navy); }
+        .weight-input::-webkit-outer-spin-button, .weight-input::-webkit-inner-spin-button {
+            -webkit-appearance: none; margin: 0;
         }
 
         .weight-unit {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-left: calc(85 * var(--u));
-            font-size: calc(28 * var(--u));
-            font-weight: 700;
-            color: var(--navy);
+            position: absolute; left: 50%; top: 50%;
+            transform: translateY(-50%); margin-left: calc(85 * var(--u));
+            font-size: calc(28 * var(--u)); font-weight: 700; color: var(--navy);
         }
 
-        /* --- UI BUTTONS (Mute, Reset, Mobile Icon) --- */
+        /* --- UI BUTTONS --- */
         .icon-btn {
-            position: absolute;
-            width: calc(44 * var(--u));
-            height: calc(44 * var(--u));
-            background: transparent;
-            border: none;
-            color: var(--navy);
-            cursor: pointer;
-            z-index: 10;
-            touch-action: manipulation;
+            position: absolute; width: calc(44 * var(--u)); height: calc(44 * var(--u));
+            background: transparent; border: none; color: var(--navy);
+            cursor: pointer; z-index: 10; touch-action: manipulation;
             transition: opacity 0.2s, transform 0.2s;
         }
-
-        .icon-btn:active {
-            opacity: 0.8;
-            transform: scale(0.9);
-        }
-
-        .icon-btn svg {
-            width: 100%;
-            height: 100%;
-        }
+        .icon-btn:active { opacity: 0.8; transform: scale(0.9); }
+        .icon-btn svg { width: 100%; height: 100%; }
 
         #mobile-drugs-btn {
-            left: 50%;
-            margin-left: calc(-130 * var(--u));
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            visibility: hidden;
-            padding: 0px;
-            display: none;
+            left: 50%; margin-left: calc(-130 * var(--u)); top: 50%;
+            transform: translateY(-50%); opacity: 0; visibility: hidden;
+            padding: 0px; display: none;
         }
-        
-        #mobile-drugs-btn.visible {
-            opacity: 0.3;
-            visibility: visible;
-        }
+        #mobile-drugs-btn.visible { opacity: 0.3; visibility: visible; }
+        #mobile-drugs-btn:active { transform: translateY(-50%) scale(0.9); }
 
-        #mobile-drugs-btn:active {
-            transform: translateY(-50%) scale(0.9);
-        }
+        #mute-btn { bottom: 0px; left: 0px; opacity: 0.3; padding: calc(6 * var(--u)); }
+        #reset-btn { bottom: 0px; right: 0px; opacity: 0.3; padding: calc(8 * var(--u)); }
 
-        #mute-btn {
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.3;
-            padding: calc(6 * var(--u));
-        }
-
-        #reset-btn {
-            bottom: 0px;
-            right: 0px;
-            opacity: 0.3;
-            padding: calc(8 * var(--u));
-        }
-
-        /* --- TIMER SVG & PROGRESS STYLING --- */
+        /* --- TIMER SVG & PROGRESS --- */
         .timer-wrapper {
-            position: relative;
-            width: calc(280 * var(--u));
-            height: calc(280 * var(--u));
+            position: relative; width: calc(280 * var(--u)); height: calc(280 * var(--u));
             margin-bottom: calc(40 * var(--u));
         }
 
-        .timer-svg {
-            transform: rotate(-90deg);
-            width: 100%;
-            height: 100%;
-        }
-
+        .timer-svg { transform: rotate(-90deg); width: 100%; height: 100%; }
+        
         .timer-track {
-            fill: none;
-            stroke: var(--light-grey);
-            stroke-width: 8;
-            transform-origin: center;
+            fill: none; stroke: var(--light-grey); stroke-width: 8; transform-origin: center;
         }
 
         .timer-progress {
-            fill: none;
-            stroke: var(--green);
-            stroke-width: 8;
-            stroke-linecap: round;
-            stroke-dasharray: 817; 
-            stroke-dashoffset: 0;
-            transition: stroke-dashoffset 0.1s linear, stroke 0.3s ease;
-            transform-origin: center;
+            fill: none; stroke: var(--green); stroke-width: 8;
+            stroke-linecap: round; stroke-dasharray: 817; stroke-dashoffset: 0;
+            transition: stroke-dashoffset 0.1s linear, stroke 0.3s ease; transform-origin: center;
         }
 
         .timer-text-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
         }
 
         .time-display {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: calc(64 * var(--u));
-            font-weight: 700;
-            color: var(--navy);
-            line-height: 1;
-            font-variant-numeric: tabular-nums; 
+            position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+            font-size: calc(64 * var(--u)); font-weight: 700; color: var(--navy);
+            line-height: 1; font-variant-numeric: tabular-nums; 
         }
 
         .cycle-text {
-            position: absolute;
-            top: 58%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            font-size: calc(16 * var(--u));
-            font-weight: 600;
-            color: #666;
-            margin-top: 0;
-            text-transform: uppercase;
-            letter-spacing: calc(1 * var(--u));
-            text-align: center;
-            white-space: pre-wrap; 
-            line-height: 1.2;
+            position: absolute; top: 58%; left: 50%; transform: translateX(-50%);
+            width: 90%; font-size: calc(16 * var(--u)); font-weight: 600;
+            color: #666; margin-top: 0; text-transform: uppercase;
+            letter-spacing: calc(1 * var(--u)); text-align: center;
+            white-space: pre-wrap; line-height: 1.2;
         }
 
-        /* --- MAIN INTERACTION BUTTON --- */
+        /* --- MAIN BUTTON --- */
         #main-btn {
-            width: 100%;
-            max-width: calc(300 * var(--u));
-            height: calc(80 * var(--u));
-            border-radius: calc(40 * var(--u));
-            border: none;
-            background-color: var(--green);
-            color: #FFFFFF;
-            font-size: calc(24 * var(--u));
-            font-weight: 800;
-            letter-spacing: calc(1 * var(--u));
-            box-shadow: 0 calc(8 * var(--u)) calc(16 * var(--u)) rgba(5, 165, 81, 0.3);
-            cursor: pointer;
-            outline: none;
+            width: 100%; max-width: calc(300 * var(--u)); height: calc(80 * var(--u));
+            border-radius: calc(40 * var(--u)); border: none; background-color: var(--green);
+            color: #FFFFFF; font-size: calc(24 * var(--u)); font-weight: 800;
+            letter-spacing: calc(1 * var(--u)); box-shadow: 0 calc(8 * var(--u)) calc(16 * var(--u)) rgba(5, 165, 81, 0.3);
+            cursor: pointer; outline: none; touch-action: manipulation; 
             transition: transform 0.1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-            touch-action: manipulation; 
         }
-
-        #main-btn:active {
-            transform: scale(0.96);
-        }
-
+        #main-btn:active { transform: scale(0.96); }
         #main-btn.paused {
-            background-color: var(--red);
-            box-shadow: 0 calc(8 * var(--u)) calc(16 * var(--u)) rgba(209, 39, 52, 0.3);
+            background-color: var(--red); box-shadow: 0 calc(8 * var(--u)) calc(16 * var(--u)) rgba(209, 39, 52, 0.3);
         }
-
         #main-btn.continue, #main-btn.pulse-check {
-            background-color: var(--yellow);
-            color: var(--navy);
-            box-shadow: 0 calc(8 * var(--u)) calc(16 * var(--u)) rgba(255, 194, 39, 0.3);
+            background-color: var(--yellow); color: var(--navy); box-shadow: 0 calc(8 * var(--u)) calc(16 * var(--u)) rgba(255, 194, 39, 0.3);
         }
 
-        /* Visual pulse for breath tone */
+        /* Animations for visual breath pulse */
         @keyframes breathPulseTrack {
             0% { transform: scale(1); filter: brightness(1); }
             50% { transform: scale(1.05); filter: brightness(1.2); }
             100% { transform: scale(1); filter: brightness(1); }
         }
-
         @keyframes breathPulseProgress {
             0% { transform: scale(1); filter: brightness(1); }
             50% { transform: scale(1.05); stroke: var(--blue); filter: brightness(1.2); }
             100% { transform: scale(1); filter: brightness(1); }
         }
-        
-        .breathing .timer-track {
-            animation: breathPulseTrack 1s ease-in-out;
-        }
+        .breathing .timer-track { animation: breathPulseTrack 1s ease-in-out; }
+        .breathing .timer-progress { animation: breathPulseProgress 1s ease-in-out; }
 
-        .breathing .timer-progress {
-            animation: breathPulseProgress 1s ease-in-out;
-        }
-
-        /* --- MOBILE OVERLAY STYLING --- */
+        /* --- MOBILE OVERLAY --- */
         .mobile-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.3); 
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            z-index: 200;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            padding: calc(20 * var(--u));
-            box-sizing: border-box;
-            cursor: pointer; 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px); z-index: 200;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
+            padding: calc(20 * var(--u)); box-sizing: border-box; cursor: pointer; 
         }
-
-        .mobile-overlay.visible {
-            opacity: 1;
-            visibility: visible;
-        }
+        .mobile-overlay.visible { opacity: 1; visibility: visible; }
 
         .mobile-combined-table {
-            width: 100%;
-            max-width: calc(350 * var(--u));
-            max-height: 95dvh; 
-            overflow: hidden; /* Scrolling completely removed */
-            cursor: pointer; 
-            box-shadow: 0 calc(10 * var(--u)) calc(30 * var(--u)) rgba(0,0,0,0.15); 
+            width: 100%; max-width: calc(350 * var(--u)); max-height: 95dvh; 
+            overflow: hidden; cursor: pointer; box-shadow: 0 calc(10 * var(--u)) calc(30 * var(--u)) rgba(0,0,0,0.15); 
         }
 
-        .drug-meta {
-            font-size: calc(9 * var(--u));
-            color: #888;
-            margin-top: calc(2 * var(--u));
-            line-height: 1.1;
+        .mobile-combined-table .drug-meta .drug-dose, .mobile-combined-table .drug-meta .drug-conc {
+            margin-top: 0; display: inline;
         }
 
-        .drug-meta .drug-dose, .drug-meta .drug-conc {
-            margin-top: 0;
-            display: inline;
-        }
-
-        /* Tightly scale the mobile overlay elements using the dynamic --u variable so they perfectly fit natively without scrolling */
         .mobile-combined-table .table-header {
-            padding: calc(5 * var(--u)) calc(10 * var(--u));
-            font-size: calc(13 * var(--u));
+            padding: calc(5 * var(--u)) calc(10 * var(--u)); font-size: calc(13 * var(--u));
         }
-
-        .mobile-combined-table .table-row {
-            padding: calc(5 * var(--u)) calc(10 * var(--u));
-        }
-
-        .mobile-combined-table .drug-name {
-            font-size: calc(13 * var(--u));
-        }
-
-        .mobile-combined-table .drug-vol {
-            font-size: calc(14 * var(--u));
-        }
+        .mobile-combined-table .table-row { padding: calc(5 * var(--u)) calc(10 * var(--u)); }
+        .mobile-combined-table .drug-name { font-size: calc(13 * var(--u)); }
+        .mobile-combined-table .drug-vol { font-size: calc(14 * var(--u)); }
 
         /* --- COPYRIGHT FOOTER --- */
         .copyright-footer {
-            position: absolute;
-            bottom: calc(8 * var(--u));
-            left: 0;
-            width: 100%;
-            text-align: center;
-            font-size: calc(10 * var(--u));
-            color: #A0AAB5; /* Soft, unobtrusive grey */
-            pointer-events: none; /* Prevents it from interfering with screen taps */
-            z-index: 10;
+            position: absolute; bottom: calc(8 * var(--u)); left: 0; width: 100%;
+            text-align: center; font-size: calc(10 * var(--u));
+            color: #A0AAB5; pointer-events: none; z-index: 10;
         }
     </style>
 </head>
 <body>
 
 <div class="app-layout">
-    
-    <!-- LEFT COLUMN: Arrest & Antiarrhythmic -->
-    <div class="side-col left-col">
-        <div class="drug-table">
-            <div class="table-header">Arrest</div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Adrenaline</span>
-                    <span class="drug-dose">0.01 mg/kg</span>
-                    <span class="drug-conc">1 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-adrenaline">--- ml</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Vasopressin</span>
-                    <span class="drug-dose">0.8 U/kg</span>
-                    <span class="drug-conc">20 U/ml</span>
-                </div>
-                <div class="drug-vol dose-val-vasopressin">--- ml</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Atropine</span>
-                    <span class="drug-dose">0.05 mg/kg</span>
-                    <span class="drug-conc">0.6 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-atropine">--- ml</div>
-            </div>
-        </div>
-
-        <div class="drug-table">
-            <div class="table-header">Antiarrhythmic</div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Amiodarone</span>
-                    <span class="drug-dose">5 mg/kg</span>
-                    <span class="drug-conc">50 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-amiodarone">--- ml</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Lignocaine</span>
-                    <span class="drug-dose">2 mg/kg</span>
-                    <span class="drug-conc">20 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-lignocaine">--- ml</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Esmolol</span>
-                    <span class="drug-dose">0.5 mg/kg</span>
-                    <span class="drug-conc">10 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-esmolol">--- ml</div>
-            </div>
-        </div>
-    </div>
+    <!-- LEFT COLUMN: Dynamically Injected via JS -->
+    <div class="side-col left-col" id="col-left"></div>
 
     <!-- CENTER COLUMN: Timer Interface -->
     <div class="center-col">
         <div class="weight-section">
-            <!-- Mobile Drug Reveal Button -->
             <button id="mobile-drugs-btn" class="icon-btn" aria-label="Show Drug Doses">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4"/>
-                    <path d="m17 7 3-3"/>
+                    <path d="m18 2 4 4"/><path d="m17 7 3-3"/>
                     <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.4 0-3.4L15 5"/>
-                    <path d="m9 11 4 4"/>
-                    <path d="m5 19-3 3"/>
-                    <path d="m14 4 6 6"/>
+                    <path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/>
                 </svg>
             </button>
-            
             <input type="number" id="patient-weight" class="weight-input" placeholder="" step="0.001" inputmode="decimal">
             <span class="weight-unit">kg</span>
         </div>
@@ -561,25 +294,20 @@
                 <div class="cycle-text" id="status-text">READY</div>
             </div>
             
-            <!-- Mute Button -->
             <button id="mute-btn" class="icon-btn" aria-label="Mute/Unmute Audio">
                 <svg id="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
                 </svg>
                 <svg id="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
                     <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                    <line x1="23" y1="9" x2="17" y2="15"></line>
-                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                    <line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>
                 </svg>
             </button>
 
-            <!-- Reset Button -->
             <button id="reset-btn" class="icon-btn" aria-label="Reset Timer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-                    <path d="M3 3v5h5"></path>
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path>
                 </svg>
             </button>
         </div>
@@ -587,198 +315,114 @@
         <button id="main-btn">START</button>
     </div>
 
-    <!-- RIGHT COLUMN: Reversal & Defib -->
-    <div class="side-col right-col">
-        <div class="drug-table">
-            <div class="table-header">Reversal</div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Naloxone</span>
-                    <span class="drug-dose">0.04 mg/kg</span>
-                    <span class="drug-conc">0.4 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-naloxone">--- ml</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Flumazenil</span>
-                    <span class="drug-dose">0.01 mg/kg</span>
-                    <span class="drug-conc">0.1 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-flumazenil">--- ml</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Atipamezole</span>
-                    <span class="drug-dose">100 µg/kg</span>
-                    <span class="drug-conc">5 mg/ml</span>
-                </div>
-                <div class="drug-vol dose-val-atipamezole">--- ml</div>
-            </div>
-        </div>
-
-        <div class="drug-table">
-            <div class="table-header">Biphasic Defibrillation</div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">External<br>Defib</span>
-                    <span class="drug-dose">2 - 4 J/kg</span>
-                </div>
-                <div class="drug-vol dose-defib dose-val-ext-defib">--- J</div>
-            </div>
-            <div class="table-row">
-                <div class="drug-info">
-                    <span class="drug-name">Internal<br>Defib</span>
-                    <span class="drug-dose">0.2 - 0.4 J/kg</span>
-                </div>
-                <div class="drug-vol dose-defib dose-val-int-defib">--- J</div>
-            </div>
-        </div>
-    </div>
-
+    <!-- RIGHT COLUMN: Dynamically Injected via JS -->
+    <div class="side-col right-col" id="col-right"></div>
 </div>
 
 <!-- COPYRIGHT FOOTER -->
 <div class="copyright-footer">© SleepyVetKid</div>
 
-<!-- MOBILE OVERLAY -->
+<!-- MOBILE OVERLAY: Dynamically Injected via JS -->
 <div class="mobile-overlay" id="mobile-overlay">
-    <div class="drug-table mobile-combined-table">
-        <div class="table-header">Arrest</div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Adrenaline</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">1 mg/ml</span> | <span class="drug-dose">0.01 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-adrenaline">--- ml</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Vasopressin</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">20 U/ml</span> | <span class="drug-dose">0.8 U/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-vasopressin">--- ml</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Atropine</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">0.6 mg/ml</span> | <span class="drug-dose">0.05 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-atropine">--- ml</div>
-        </div>
-
-        <div class="table-header">Antiarrhythmic</div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Amiodarone</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">50 mg/ml</span> | <span class="drug-dose">5 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-amiodarone">--- ml</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Lignocaine</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">20 mg/ml</span> | <span class="drug-dose">2 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-lignocaine">--- ml</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Esmolol</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">10 mg/ml</span> | <span class="drug-dose">0.5 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-esmolol">--- ml</div>
-        </div>
-
-        <div class="table-header">Reversal</div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Naloxone</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">0.4 mg/ml</span> | <span class="drug-dose">0.04 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-naloxone">--- ml</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Flumazenil</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">0.1 mg/ml</span> | <span class="drug-dose">0.01 mg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-flumazenil">--- ml</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Atipamezole</span>
-                <div class="drug-meta">
-                    <span class="drug-conc">5 mg/ml</span> | <span class="drug-dose">100 µg/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-val-atipamezole">--- ml</div>
-        </div>
-
-        <div class="table-header">Biphasic Defibrillation</div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">External Defib</span>
-                <div class="drug-meta">
-                    <span class="drug-dose">2 - 4 J/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-defib dose-val-ext-defib">--- J</div>
-        </div>
-        <div class="table-row">
-            <div class="drug-info">
-                <span class="drug-name">Internal Defib</span>
-                <div class="drug-meta">
-                    <span class="drug-dose">0.2 - 0.4 J/kg</span>
-                </div>
-            </div>
-            <div class="drug-vol dose-defib dose-val-int-defib">--- J</div>
-        </div>
-    </div>
+    <div class="drug-table mobile-combined-table" id="mobile-table-inner"></div>
 </div>
 
 <script>
-    // --- APP STATE & VARIABLES ---
-    const COMPRESSION_DURATION_MS = 120000; // 2 minutes
-    const PULSE_CHECK_DURATION_MS = 10000;  // 10 seconds
-    
-    let currentPhase = 'COMPRESSION'; // 'COMPRESSION' or 'PULSE_CHECK'
-    let timeRemaining = COMPRESSION_DURATION_MS;
-    
-    let isRunning = false;
-    let timerInterval = null;
-    let lastTickTime = 0;
+    // --- SINGLE SOURCE OF TRUTH FOR DRUGS (Simplifies HTML tremendously) ---
+    const drugData = [
+        {
+            category: 'Arrest', col: 'left',
+            drugs: [
+                { id: 'adrenaline', name: 'Adrenaline', dose: '0.01 mg/kg', conc: '1 mg/ml', mult: 0.01, unit: 'ml', dec: 2 },
+                { id: 'vasopressin', name: 'Vasopressin', dose: '0.8 U/kg', conc: '20 U/ml', mult: 0.04, unit: 'ml', dec: 2 },
+                { id: 'atropine', name: 'Atropine', dose: '0.05 mg/kg', conc: '0.6 mg/ml', mult: 0.05 / 0.6, unit: 'ml', dec: 2 }
+            ]
+        },
+        {
+            category: 'Antiarrhythmic', col: 'left',
+            drugs: [
+                { id: 'amiodarone', name: 'Amiodarone', dose: '5 mg/kg', conc: '50 mg/ml', mult: 0.1, unit: 'ml', dec: 2 },
+                { id: 'lignocaine', name: 'Lignocaine', dose: '2 mg/kg', conc: '20 mg/ml', mult: 0.1, unit: 'ml', dec: 2 },
+                { id: 'esmolol', name: 'Esmolol', dose: '0.5 mg/kg', conc: '10 mg/ml', mult: 0.05, unit: 'ml', dec: 2 }
+            ]
+        },
+        {
+            category: 'Reversal', col: 'right',
+            drugs: [
+                { id: 'naloxone', name: 'Naloxone', dose: '0.04 mg/kg', conc: '0.4 mg/ml', mult: 0.1, unit: 'ml', dec: 2 },
+                { id: 'flumazenil', name: 'Flumazenil', dose: '0.01 mg/kg', conc: '0.1 mg/ml', mult: 0.1, unit: 'ml', dec: 2 },
+                { id: 'atipamezole', name: 'Atipamezole', dose: '100 µg/kg', conc: '5 mg/ml', mult: 0.02, unit: 'ml', dec: 2 }
+            ]
+        },
+        {
+            category: 'Biphasic Defibrillation', col: 'right',
+            drugs: [
+                { id: 'ext-defib', name: 'External<br>Defib', dose: '2 - 4 J/kg', conc: '', mult: 2, unit: 'J', dec: 1, isDefib: true },
+                { id: 'int-defib', name: 'Internal<br>Defib', dose: '0.2 - 0.4 J/kg', conc: '', mult: 0.2, unit: 'J', dec: 1, isDefib: true }
+            ]
+        }
+    ];
 
-    // Audio tracking
+    // --- HTML GENERATOR ---
+    function renderDrugTables() {
+        let leftHTML = '', rightHTML = '', mobileHTML = '';
+
+        drugData.forEach(group => {
+            // Build Desktop Table Block
+            let desktopRows = group.drugs.map(d => `
+                <div class="table-row">
+                    <div class="drug-info">
+                        <span class="drug-name">${d.name}</span>
+                        <span class="drug-dose">${d.dose}</span>
+                        ${d.conc ? `<span class="drug-conc">${d.conc}</span>` : ''}
+                    </div>
+                    <div class="drug-vol dose-val-${d.id} ${d.isDefib ? 'dose-defib' : ''}">--- ${d.unit}</div>
+                </div>
+            `).join('');
+            
+            let tableBlock = `<div class="drug-table"><div class="table-header">${group.category}</div>${desktopRows}</div>`;
+            if (group.col === 'left') leftHTML += tableBlock;
+            else rightHTML += tableBlock;
+
+            // Build Mobile Table Rows
+            mobileHTML += `<div class="table-header">${group.category}</div>`;
+            mobileHTML += group.drugs.map(d => `
+                <div class="table-row">
+                    <div class="drug-info">
+                        <!-- Strip out the <br> for the mobile view so it renders nicely inline -->
+                        <span class="drug-name">${d.name.replace('<br>', ' ')}</span>
+                        <div class="drug-meta">
+                            ${d.conc ? `<span class="drug-conc">${d.conc}</span> | ` : ''}<span class="drug-dose">${d.dose}</span>
+                        </div>
+                    </div>
+                    <div class="drug-vol dose-val-${d.id} ${d.isDefib ? 'dose-defib' : ''}">--- ${d.unit}</div>
+                </div>
+            `).join('');
+        });
+
+        document.getElementById('col-left').innerHTML = leftHTML;
+        document.getElementById('col-right').innerHTML = rightHTML;
+        document.getElementById('mobile-table-inner').innerHTML = mobileHTML;
+    }
+
+    renderDrugTables(); // Execute on load
+
+    // --- APP STATE & VARIABLES ---
+    const COMPRESSION_DURATION_MS = 120000;
+    const PULSE_CHECK_DURATION_MS = 10000; 
     const BPM = 110;
     const MS_PER_BEAT = 60000 / BPM; 
     const BREATH_INTERVAL_MS = 6000; 
     
-    let nextBeatTime = 0;
-    let nextBreathTime = 0;
-    let totalElapsedMs = 0; 
-    let warningPlayed = false;
-    let isMuted = false;
+    let currentPhase = 'COMPRESSION';
+    let timeRemaining = COMPRESSION_DURATION_MS;
+    let isRunning = false;
+    let timerInterval = null;
+    let lastTickTime = 0;
 
-    // Touch/Hold tracking
+    let nextBeatTime = 0, nextBreathTime = 0, totalElapsedMs = 0; 
+    let warningPlayed = false, isMuted = false, isResetting = false;
     let holdTimeout = null;
-    let isResetting = false;
 
     // DOM Elements
     const timeDisplay = document.getElementById('time-display');
@@ -786,115 +430,58 @@
     const mainBtn = document.getElementById('main-btn');
     const statusText = document.getElementById('status-text');
     const timerWrapper = document.getElementById('timer-wrapper');
-    const resetBtn = document.getElementById('reset-btn');
-    const muteBtn = document.getElementById('mute-btn');
-    const iconSoundOn = document.getElementById('icon-sound-on');
-    const iconSoundOff = document.getElementById('icon-sound-off');
     const weightInput = document.getElementById('patient-weight');
-    const leftCol = document.querySelector('.left-col');
-    const rightCol = document.querySelector('.right-col');
     
-    // Mobile Overlay Elements
-    const mobileDrugsBtn = document.getElementById('mobile-drugs-btn');
-    const mobileOverlay = document.getElementById('mobile-overlay');
-
-    // Calculate maximum stroke offset for the circle math
-    const radius = 130;
-    const circumference = 2 * Math.PI * radius; 
-
-    // --- AUDIO SYNTHESIS ENGINE ---
+    // Audio Synthesis Engine
     let audioCtx = null;
-
     function initAudio() {
-        if (!audioCtx) {
-            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        if (audioCtx.state === 'suspended') {
-            audioCtx.resume();
-        }
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
     }
 
-    // Toggle Mute Logic
-    muteBtn.addEventListener('pointerdown', (e) => {
-        e.preventDefault();
-        isMuted = !isMuted;
-        if (isMuted) {
-            iconSoundOn.style.display = 'none';
-            iconSoundOff.style.display = 'block';
-        } else {
-            iconSoundOn.style.display = 'block';
-            iconSoundOff.style.display = 'none';
-        }
-    });
-
-    function playMetronomeClick() {
+    function createOscillator(type, freq, startGain, rampTime, rampVal, duration) {
         if (!audioCtx || isMuted) return;
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
+        osc.connect(gain); gain.connect(audioCtx.destination);
+        osc.type = type; osc.frequency.setValueAtTime(freq, audioCtx.currentTime); 
         
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        
-        osc.type = 'square';
-        osc.frequency.setValueAtTime(800, audioCtx.currentTime); 
-        
-        gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
-        
-        osc.start(audioCtx.currentTime);
-        osc.stop(audioCtx.currentTime + 0.05);
+        gain.gain.setValueAtTime(startGain, audioCtx.currentTime);
+        if (rampTime > 0) gain.gain.linearRampToValueAtTime(rampVal, audioCtx.currentTime + rampTime);
+        else gain.gain.exponentialRampToValueAtTime(rampVal, audioCtx.currentTime + duration);
+
+        osc.start(audioCtx.currentTime); osc.stop(audioCtx.currentTime + duration);
+        return {osc, gain};
     }
 
+    function playMetronomeClick() { createOscillator('square', 800, 0.5, 0, 0.001, 0.05); }
+    
     function playBreathTone() {
-        if (!audioCtx) return;
-        
-        // The visual cue keeps running regardless of mute state
         timerWrapper.classList.add('breathing');
         setTimeout(() => timerWrapper.classList.remove('breathing'), 1000);
-
         if (isMuted) return;
-
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(500, audioCtx.currentTime); 
-        
-        gain.gain.setValueAtTime(0, audioCtx.currentTime);
-        gain.gain.linearRampToValueAtTime(0.8, audioCtx.currentTime + 0.1);
-        gain.gain.setValueAtTime(0.8, audioCtx.currentTime + 0.8);
-        gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1.0);
-        
-        osc.start(audioCtx.currentTime);
-        osc.stop(audioCtx.currentTime + 1.0);
+        const s = createOscillator('sine', 500, 0, 0.1, 0.8, 1.0);
+        if (s) s.gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1.0);
     }
 
     function playWarningTone() {
         if (!audioCtx || isMuted) return;
         const now = audioCtx.currentTime;
         for (let i = 0; i < 3; i++) {
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            osc.connect(gain);
-            gain.connect(audioCtx.destination);
-            osc.type = 'sine'; 
-            osc.frequency.setValueAtTime(1000, now + (i * 0.2)); 
+            const osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
+            osc.connect(gain); gain.connect(audioCtx.destination);
+            osc.type = 'sine'; osc.frequency.setValueAtTime(1000, now + (i * 0.2)); 
             gain.gain.setValueAtTime(0, now + (i * 0.2));
             gain.gain.linearRampToValueAtTime(0.6, now + (i * 0.2) + 0.02);
             gain.gain.exponentialRampToValueAtTime(0.01, now + (i * 0.2) + 0.15);
-            osc.start(now + (i * 0.2));
-            osc.stop(now + (i * 0.2) + 0.15);
+            osc.start(now + (i * 0.2)); osc.stop(now + (i * 0.2) + 0.15);
         }
     }
 
     // --- CORE TIMER LOGIC ---
     function updateUI() {
-        const totalSeconds = Math.ceil(timeRemaining / 1000);
-        const mins = Math.floor(totalSeconds / 60);
-        const secs = totalSeconds % 60;
+        const totalSecs = Math.ceil(timeRemaining / 1000);
+        const mins = Math.floor(totalSecs / 60), secs = totalSecs % 60;
         timeDisplay.innerText = `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
 
         if (!isRunning && timeRemaining === COMPRESSION_DURATION_MS && currentPhase === 'COMPRESSION') {
@@ -903,266 +490,130 @@
             statusText.innerText = "PAUSED";
         } else if (currentPhase === 'PULSE_CHECK') {
             statusText.innerText = "PULSE CHECK";
-        } else if (currentPhase === 'COMPRESSION') {
-            if (timeRemaining <= 10000 && timeRemaining > 0) {
-                statusText.innerText = "PREPARE FOR\nPULSE CHECK"; 
-            } else {
-                statusText.innerText = "CHEST COMPRESSIONS";
-            }
+        } else {
+            statusText.innerText = (timeRemaining <= 10000 && timeRemaining > 0) ? "PREPARE FOR\nPULSE CHECK" : "CHEST COMPRESSIONS";
         }
 
         const duration = currentPhase === 'COMPRESSION' ? COMPRESSION_DURATION_MS : PULSE_CHECK_DURATION_MS;
-        const progressRatio = timeRemaining / duration;
-        
-        // This math guarantees positive dashoffsets to prevent Safari rendering inversion
-        const dashoffset = circumference - (progressRatio * circumference);
-        progressBar.style.strokeDashoffset = dashoffset;
-    }
-
-    function resetTimer() {
-        isRunning = false;
-        currentPhase = 'COMPRESSION';
-        timeRemaining = COMPRESSION_DURATION_MS;
-        totalElapsedMs = 0;
-        nextBeatTime = 0;
-        nextBreathTime = 0;
-        warningPlayed = false;
-        cancelAnimationFrame(timerInterval);
-        
-        mainBtn.innerText = "START";
-        mainBtn.className = ""; 
-        progressBar.style.stroke = "var(--green)";
-        
-        updateUI();
+        progressBar.style.strokeDashoffset = 817 - ((timeRemaining / duration) * 817);
     }
 
     function toggleTimer() {
         initAudio(); 
-        
         if (currentPhase === 'PULSE_CHECK') {
-            currentPhase = 'COMPRESSION';
-            timeRemaining = COMPRESSION_DURATION_MS;
-            nextBeatTime = totalElapsedMs; 
-            warningPlayed = false;
-            
-            mainBtn.innerText = "STOP";
-            mainBtn.className = "paused"; 
-            progressBar.style.stroke = "var(--red)";
-            
-            updateUI(); 
-            return;
-        }
-
-        if (isRunning) {
-            isRunning = false;
-            cancelAnimationFrame(timerInterval);
-            
-            mainBtn.innerText = "RESTART";
-            mainBtn.className = "continue"; 
-            progressBar.style.stroke = "var(--yellow)";
-            
-            updateUI(); 
+            currentPhase = 'COMPRESSION'; timeRemaining = COMPRESSION_DURATION_MS;
+            nextBeatTime = totalElapsedMs; warningPlayed = false;
+        } else if (isRunning) {
+            isRunning = false; cancelAnimationFrame(timerInterval);
         } else {
-            isRunning = true;
-            
+            isRunning = true; lastTickTime = Date.now();
             if (currentPhase === 'COMPRESSION' && timeRemaining < COMPRESSION_DURATION_MS) {
-                timeRemaining = COMPRESSION_DURATION_MS;
-                totalElapsedMs = 0; 
-                nextBeatTime = 0;
-                nextBreathTime = 0;
-                warningPlayed = false;
+                timeRemaining = COMPRESSION_DURATION_MS; totalElapsedMs = 0; 
+                nextBeatTime = 0; nextBreathTime = 0; warningPlayed = false;
             }
-
-            lastTickTime = Date.now();
-            
-            if (nextBeatTime < totalElapsedMs) {
-                nextBeatTime = totalElapsedMs;
-            }
-            
-            mainBtn.innerText = "STOP";
-            mainBtn.className = "paused"; 
-            progressBar.style.stroke = "var(--red)";
-            
+            if (nextBeatTime < totalElapsedMs) nextBeatTime = totalElapsedMs;
             runTimerLoop();
         }
+
+        mainBtn.innerText = isRunning ? "STOP" : "RESTART";
+        mainBtn.className = isRunning ? "paused" : "continue"; 
+        progressBar.style.stroke = isRunning ? "var(--red)" : "var(--yellow)";
+        updateUI(); 
     }
 
     function runTimerLoop() {
         if (!isRunning) return;
-
-        const now = Date.now();
-        const delta = now - lastTickTime;
-        lastTickTime = now;
-
-        timeRemaining -= delta;
-        totalElapsedMs += delta;
+        const now = Date.now(), delta = now - lastTickTime;
+        lastTickTime = now; timeRemaining -= delta; totalElapsedMs += delta;
 
         if (currentPhase === 'COMPRESSION' && totalElapsedMs >= nextBeatTime) {
-            playMetronomeClick();
-            nextBeatTime += MS_PER_BEAT;
+            playMetronomeClick(); nextBeatTime += MS_PER_BEAT;
         }
-
         if (totalElapsedMs >= nextBreathTime) {
-            playBreathTone();
-            nextBreathTime += BREATH_INTERVAL_MS;
+            playBreathTone(); nextBreathTime += BREATH_INTERVAL_MS;
         }
-
         if (currentPhase === 'COMPRESSION' && timeRemaining <= 10000 && !warningPlayed) {
-            playWarningTone();
-            warningPlayed = true;
+            playWarningTone(); warningPlayed = true;
         }
 
         if (timeRemaining <= 0) {
-            if (currentPhase === 'COMPRESSION') {
-                currentPhase = 'PULSE_CHECK';
-                timeRemaining += PULSE_CHECK_DURATION_MS; 
-                
-                mainBtn.innerText = "RESUME CPR";
-                mainBtn.className = "pulse-check"; 
-                progressBar.style.stroke = "var(--yellow)";
-                
-            } else {
-                currentPhase = 'COMPRESSION';
-                timeRemaining += COMPRESSION_DURATION_MS;
-                nextBeatTime = totalElapsedMs; 
-                warningPlayed = false;
-                
-                mainBtn.innerText = "STOP";
-                mainBtn.className = "paused"; 
-                progressBar.style.stroke = "var(--red)";
+            currentPhase = currentPhase === 'COMPRESSION' ? 'PULSE_CHECK' : 'COMPRESSION';
+            timeRemaining += currentPhase === 'PULSE_CHECK' ? PULSE_CHECK_DURATION_MS : COMPRESSION_DURATION_MS;
+            
+            if(currentPhase === 'COMPRESSION') {
+                nextBeatTime = totalElapsedMs; warningPlayed = false;
             }
+            
+            mainBtn.innerText = currentPhase === 'PULSE_CHECK' ? "RESUME CPR" : "STOP";
+            mainBtn.className = currentPhase === 'PULSE_CHECK' ? "pulse-check" : "paused"; 
+            progressBar.style.stroke = currentPhase === 'PULSE_CHECK' ? "var(--yellow)" : "var(--red)";
         }
-
         updateUI();
         timerInterval = requestAnimationFrame(runTimerLoop);
     }
 
-    // --- EVENT LISTENERS (Using Pointer Events) ---
-    
-    // Main Button Hold Logic (1 Second to Reset)
+    // --- EVENT LISTENERS ---
     mainBtn.addEventListener('pointerdown', (e) => {
-        e.preventDefault(); 
         isResetting = false;
-        
         holdTimeout = setTimeout(() => {
-            isResetting = true;
-            navigator.vibrate && navigator.vibrate(200); 
-            resetTimer();
+            isResetting = true; navigator.vibrate && navigator.vibrate(200); 
+            document.getElementById('reset-btn').dispatchEvent(new Event('pointerdown'));
         }, 1000);
     });
 
     mainBtn.addEventListener('pointerup', (e) => {
-        e.preventDefault();
-        if (holdTimeout) {
-            clearTimeout(holdTimeout);
-            holdTimeout = null;
-        }
-        if (!isResetting) {
-            toggleTimer();
-        }
+        if (holdTimeout) clearTimeout(holdTimeout);
+        if (!isResetting) toggleTimer();
     });
 
     mainBtn.addEventListener('pointerleave', () => clearTimeout(holdTimeout));
-    mainBtn.addEventListener('pointercancel', () => clearTimeout(holdTimeout));
-
-    // Reset Button Logic
-    resetBtn.addEventListener('pointerdown', (e) => {
-        e.preventDefault(); 
-        initAudio(); 
+    
+    document.getElementById('reset-btn').addEventListener('pointerdown', (e) => {
+        initAudio(); currentPhase = 'COMPRESSION';
+        timeRemaining = COMPRESSION_DURATION_MS; totalElapsedMs = 0;
+        nextBeatTime = 0; nextBreathTime = 0; warningPlayed = false;
         
-        currentPhase = 'COMPRESSION';
-        timeRemaining = COMPRESSION_DURATION_MS;
-        totalElapsedMs = 0;
-        nextBeatTime = 0;
-        nextBreathTime = 0;
-        warningPlayed = false;
-        
-        if (isRunning) {
-            // Keep running, just restart the cycle cleanly
-            lastTickTime = Date.now();
-            mainBtn.innerText = "STOP";
-            mainBtn.className = "paused"; 
-            progressBar.style.stroke = "var(--red)";
-        } else {
-            // Reset to a clean 'READY' start state without running
-            mainBtn.innerText = "START";
-            mainBtn.className = ""; 
-            progressBar.style.stroke = "var(--green)";
-        }
-        
+        if (isRunning) lastTickTime = Date.now();
+        else { mainBtn.innerText = "START"; mainBtn.className = ""; progressBar.style.stroke = "var(--green)"; }
         updateUI();
     });
 
-    // Mobile Overlay Logic
-    mobileDrugsBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        mobileOverlay.classList.add('visible');
+    document.getElementById('mute-btn').addEventListener('pointerdown', () => {
+        isMuted = !isMuted;
+        document.getElementById('icon-sound-on').style.display = isMuted ? 'none' : 'block';
+        document.getElementById('icon-sound-off').style.display = isMuted ? 'block' : 'none';
     });
 
-    mobileOverlay.addEventListener('click', () => {
-        mobileOverlay.classList.remove('visible');
-    });
-
-    // --- DOSAGE CALCULATOR LOGIC ---
-    
-    // Configured Drug Array (Multiplier = mg/kg divided by mg/ml)
-    const drugConfig = [
-        { id: 'adrenaline', mult: 0.01, unit: 'ml', decimals: 2 },
-        { id: 'vasopressin', mult: 0.04, unit: 'ml', decimals: 2 },
-        { id: 'atropine', mult: 0.05 / 0.6, unit: 'ml', decimals: 2 },
-        { id: 'amiodarone', mult: 0.1, unit: 'ml', decimals: 2 },
-        { id: 'lignocaine', mult: 0.1, unit: 'ml', decimals: 2 },
-        { id: 'esmolol', mult: 0.05, unit: 'ml', decimals: 2 },
-        { id: 'naloxone', mult: 0.1, unit: 'ml', decimals: 2 },
-        { id: 'flumazenil', mult: 0.1, unit: 'ml', decimals: 2 },
-        { id: 'atipamezole', mult: 0.02, unit: 'ml', decimals: 2 },
-        { id: 'ext-defib', mult: 2, unit: 'J', decimals: 1 },
-        { id: 'int-defib', mult: 0.2, unit: 'J', decimals: 1 }
-    ];
-
-    function updateDoseUI(drugID, value) {
-        document.querySelectorAll('.dose-val-' + drugID).forEach(el => el.innerText = value);
-    }
-
-    function calculateDoses(weight) {
-        drugConfig.forEach(drug => {
-            const val = (weight * drug.mult).toFixed(drug.decimals);
-            updateDoseUI(drug.id, `${val} ${drug.unit}`);
-        });
-    }
-
-    function resetDoses() {
-        drugConfig.forEach(drug => {
-            updateDoseUI(drug.id, `--- ${drug.unit}`);
-        });
-    }
-
-    // Enforce exactly 3 decimal places and trigger calculations
+    // --- DOSAGE LOGIC ---
     weightInput.addEventListener('input', function() {
+        // Restrict to 3 decimal places
         if (this.value.includes('.')) {
             const parts = this.value.split('.');
-            if (parts[1].length > 3) {
-                this.value = parts[0] + '.' + parts[1].slice(0, 3);
-            }
+            if (parts[1].length > 3) this.value = parts[0] + '.' + parts[1].slice(0, 3);
         }
         
         const weight = parseFloat(this.value);
-        if (weight > 0) {
-            calculateDoses(weight);
-            leftCol.classList.add('visible');
-            rightCol.classList.add('visible');
-            mobileDrugsBtn.classList.add('visible');
-        } else {
-            resetDoses();
-            leftCol.classList.remove('visible');
-            rightCol.classList.remove('visible');
-            mobileDrugsBtn.classList.remove('visible');
-        }
+        const isValid = weight > 0;
+
+        drugData.forEach(group => group.drugs.forEach(d => {
+            const displayVal = isValid ? (weight * d.mult).toFixed(d.dec) : '---';
+            document.querySelectorAll('.dose-val-' + d.id).forEach(el => el.innerText = `${displayVal} ${d.unit}`);
+        }));
+
+        ['col-left', 'col-right', 'mobile-drugs-btn'].forEach(id => {
+            document.getElementById(id).classList.toggle('visible', isValid);
+        });
     });
 
-    // Initialize UI on load
-    updateUI();
+    // Mobile UI Interaction
+    document.getElementById('mobile-drugs-btn').addEventListener('click', (e) => {
+        e.stopPropagation(); document.getElementById('mobile-overlay').classList.add('visible');
+    });
+    document.getElementById('mobile-overlay').addEventListener('click', function() {
+        this.classList.remove('visible');
+    });
 
+    updateUI(); // Init Timer state
 </script>
 </body>
 </html>
